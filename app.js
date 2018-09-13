@@ -12,7 +12,7 @@ var Character = function(img, x, y) {
 
 
 var Star = function() {
-    Character.call(this, 'images/star.png', -100, 30);
+    Character.call(this, 'star.png', -100, 30);
     this.y = positionsStar[Math.floor(Math.random() * 9)];
     this.speed = Math.floor(Math.random() * 100) + 100;
 };
@@ -37,7 +37,7 @@ Star.prototype.render = function() {
 
 var Enemy = function() {
     
-    Character.call(this, 'images/enemy-bug.png', -100, 200);
+    Character.call(this, 'enemy-bug.png', -100, 200);
     
     this.y = positions[Math.floor(Math.random() * 4)];
     
@@ -68,7 +68,7 @@ Enemy.prototype.render = function() {
 
 var Player = function() {
   
-    Character.call(this, 'images/char-pink-girl.png', 400, 600);
+    Character.call(this, 'char-pink-girl.png', 400, 600);
 };
 
 Player.prototype = Object.create(Character.prototype);
@@ -86,7 +86,7 @@ function playerDies() {
 }
 
 function gotPoint() {
-    player.sprite = 'images/char-princess-girl.png';
+    player.sprite = 'char-princess-girl.png';
 
 }
 
@@ -150,7 +150,7 @@ Player.prototype.update = function() {
 Player.prototype.reset = function() {
     this.x = 400;
     this.y = 600;
-    this.sprite = 'images/char-pink-girl.png';
+    this.sprite = 'char-pink-girl.png';
 };
 
 var allEnemies = [];
