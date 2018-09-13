@@ -120,14 +120,14 @@ var Engine = (function(global) {
          * for that particular row of the game level.
          */
         var rowImages = [
-                'images/water-block.png',   // Top row is water
-                'images/stone-block.png',   // Row 1 of 3 of stone
-                'images/stone-block.png',   // Row 2 of 3 of stone
-                'images/stone-block.png',   // Row 3 of 3 of stone
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png',    // Row 2 of 2 of grass
-                'images/grass-block.png',   // Row 1 of 2 of grass
-                'images/grass-block.png',    // Row 2 of 2 of grass
+                'water-block.png',   // Top row is water
+                'stone-block.png',   // Row 1 of 3 of stone
+                'stone-block.png',   // Row 2 of 3 of stone
+                'stone-block.png',   // Row 3 of 3 of stone
+                'grass-block.png',   // Row 1 of 2 of grass
+                'grass-block.png',    // Row 2 of 2 of grass
+                'grass-block.png',   // Row 1 of 2 of grass
+                'grass-block.png',    // Row 2 of 2 of grass
             ],
             numRows = 8,
             numCols = 9,
@@ -185,16 +185,16 @@ var Engine = (function(global) {
      * all of these images are properly loaded our game will start.
      */
     Resources.load([
-        'images/stone-block.png',
-        'images/water-block.png',
-        'images/grass-block.png',
-        'images/enemy-bug.png',
-        'images/char-boy.png',
-        'images/char-pink-girl.png',
-        'images/star.png',
-        'images/char-princess-girl.png',
-        'images/char-horn-girl.png',
-        'images/char-cat-girl.png'
+        'stone-block.png',
+        'water-block.png',
+        'grass-block.png',
+        'enemy-bug.png',
+        'char-boy.png',
+        'char-pink-girl.png',
+        'star.png',
+        'char-princess-girl.png',
+        'char-horn-girl.png',
+        'char-cat-girl.png'
     ]);
     Resources.onReady(init);
 
