@@ -1,4 +1,5 @@
 //Create array of enemy positions at y coordinate
+
 var positions = [80, 100, 200, 300, 500, 700];
 var positionsStar = [10, 50, 150, 300, 500, 800];
 
@@ -58,6 +59,7 @@ Enemy.prototype.constructor = Enemy;
    
 Enemy.prototype.update = function(dt) {
     this.x += this.speed * dt;
+    
     //Instantiate a new enemy when another enemy goes off screen! 
     if (this.x >= 800) {
         allEnemies.push(new Enemy());
@@ -66,6 +68,7 @@ Enemy.prototype.update = function(dt) {
         allEnemies.splice(enemiesList, 1);
     }
 };
+
 //Put our enemy on screen!
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -73,17 +76,18 @@ Enemy.prototype.render = function() {
 
 //Here is our player class that delegates to Character
 var Player = function() {
-//here we need an x, y position of where my player is at  
-    Character.call(this, 'char-pink-girl.png', 400, 600);
+Character.call(this, 'char-cat-girl.png', 400, 600);
 };
 //For safe inheritance, I'm calling Object.create and the constructor function
 Player.prototype = Object.create(Character.prototype);
 Player.prototype.constructor = Player;
+
 //Draw the player on the screen
 Player.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     displayScoreLevel(gameLevel);
 };
+
 // Reset your player when he dies!
 
 function playerDies() {
@@ -92,7 +96,7 @@ function playerDies() {
 }
 
 function gotPoint() {
-    player.sprite = 'char-pink-girl.png';
+    player.sprite = 'char-cat-girl.png';
 
 }
 
