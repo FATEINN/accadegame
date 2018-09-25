@@ -71,7 +71,7 @@ Enemy.prototype.render = function() {
 //Here is our player class that delegates to Character
 var Player = function() {
     //here we need an x, y position of where my player is at
-    Character.call(this, 'char-cat-girl.png', 400, 600);
+    Character.call(this, 'char-pink-girl.png', 400, 600);
 };
 
 //For safe inheritance, I'm calling Object.create and the constructor function
@@ -90,7 +90,7 @@ function playerDies() {
 }
 
 function gotPoint() {
-    player.sprite = 'char-cat-girl.png';
+    player.sprite = 'char-princess-girl.png';
 
 }
 
@@ -159,7 +159,7 @@ Player.prototype.update = function() {
 Player.prototype.reset = function() {
     this.x = 400;
     this.y = 600;
-    this.sprite = 'char-cat-girl.png';
+    this.sprite = 'char-pink-girl.png';
 };
 
 // Now instantiate your objects.
