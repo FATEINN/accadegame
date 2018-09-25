@@ -13,7 +13,7 @@ var Character = function(img, x, y) {
 
 //Create star subclass and call the Character superclass
 var Star = function() {
-    Character.call(this, 'images/star.png', -100, 30);
+    Character.call(this, 'star.png', -100, 30);
     this.y = positionsStar[Math.floor(Math.random() * 9)];
     this.speed = Math.floor(Math.random() * 100) + 100;
 };
@@ -39,7 +39,7 @@ Star.prototype.render = function() {
 // This class delegates to our superclass
 var Enemy = function() {
     // Set our enemies starting position
-    Character.call(this, 'images/enemy-bug.png', -100, 200);
+    Character.call(this, 'enemy-bug.png', -100, 200);
     // Have enemies appear randomly at different y co-ordinates
     this.y = positions[Math.floor(Math.random() * 4)];
     // Have enemies randomly have different speeds
@@ -71,7 +71,7 @@ Enemy.prototype.render = function() {
 //Here is our player class that delegates to Character
 var Player = function() {
     //here we need an x, y position of where my player is at
-    Character.call(this, 'images/char-pink-girl.png', 400, 600);
+    Character.call(this, 'char-cat-girl.png', 400, 600);
 };
 
 //For safe inheritance, I'm calling Object.create and the constructor function
@@ -90,7 +90,7 @@ function playerDies() {
 }
 
 function gotPoint() {
-    player.sprite = 'images/char-princess-girl.png';
+    player.sprite = 'char-cat-girl.png';
 
 }
 
@@ -159,7 +159,7 @@ Player.prototype.update = function() {
 Player.prototype.reset = function() {
     this.x = 400;
     this.y = 600;
-    this.sprite = 'images/char-pink-girl.png';
+    this.sprite = 'char-cat-girl.png';
 };
 
 // Now instantiate your objects.
