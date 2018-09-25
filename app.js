@@ -92,7 +92,7 @@ function playerDies() {
 }
 
 function gotPoint() {
-    player.sprite = 'char-princess-girl.png';
+    player.sprite = 'char-pink-girl.png';
 
 }
 
