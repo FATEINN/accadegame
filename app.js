@@ -147,8 +147,8 @@ Player.prototype.handleInput = function(e) {
 // When player wins, give an alert and reset player
 Player.prototype.update = function() {
     if (this.y < 50) {
-        //ctx.fillStyle = 'pink';
-        //ctx.fillRect(0, 0, 905, 171);
+        ctx.fillStyle = 'pink';
+        ctx.fillRect(0, 0, 905, 171);
         gameLevel += 1;
         console.log('current level: ' + gameLevel);
         increaseDifficulty(gameLevel);
